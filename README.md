@@ -22,7 +22,7 @@ This is a simple task management application built using React.js and React Rout
 ## Installation and Setup
 1. Clone the repository:
    
-   git clone https://github.com/your-repo/task-manager.git
+   git clone https://github.com/Shaik0233/taskmanagement/tree/master
    
 2. Navigate to the project directory:
    

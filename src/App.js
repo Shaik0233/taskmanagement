@@ -1,19 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavigationBar from './components/navigation/Navbar';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavigationBar from "./components/navigation/Navbar";
+import TaskListPage from "./pages/TaskListPage";
+import TaskDetailsPage from "./pages/TaskDetailsPage";
+import AddTaskPage from "./pages/AddTaskPage";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AddTask from './components/TaskFormComp';
-import TaskList from './components/TaskListComp';
-import TaskDetails from './components/TaskDetailsComp';
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const App = () => {
   return (
     <Router>
       <NavigationBar />
       <Routes>
-        <Route path="/" element={<AddTask />} />
-        <Route path="/tasklist" element={<TaskList />} />
-        <Route path="/taskdetails/:id" element={<TaskDetails />} />
+        <Route path="/" element={<TaskListPage />} />
+        <Route path="/taskdetails/:id" element={<TaskDetailsPage />} />
+        <Route path="/addtask" element={<AddTaskPage />} />
+        <Route path="/addtask/:id" element={<AddTaskPage />} />
       </Routes>
     </Router>
   );
